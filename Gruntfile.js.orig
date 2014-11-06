@@ -370,7 +370,10 @@ module.exports = function (grunt) {
     },
 
     buildcontrol: {
+<<<<<<< HEAD
+=======
       remote: 'git@heroku.com:mountaincolt',
+>>>>>>> Projects grid view adjusts for 2 across
       options: {
         dir: 'dist',
         commit: true,
