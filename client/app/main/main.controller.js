@@ -3,7 +3,7 @@
 angular.module('fullstackApp')
   .controller('MainCtrl', function ($scope, $http) {
     $scope.awesomeThings = [];
-    $scope.projects = [1,2,3,4,5,6,7];
+    $scope.projects = [1,2];
     $scope.pMod0 = $scope.projects.length % 3 === 0;
     $scope.pMod1 = $scope.projects.length % 3 === 1;
     $scope.pEven = $scope.projects.length % 2 === 0;
