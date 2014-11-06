@@ -8,6 +8,6 @@ before_script:
 services: mongodb
 after_success:
   - bash ./travis/after_success.sh
-#env:
-#	global:
-#		secure: heroku key
+env:
+	global:
+		secure: "V0uiEK8pjvCWgqL07dPrY9/deMGYkIQcCD6bDi1y+wWfHaYr53C0lK1cPTWtoJRCOpLqMlGdZGqwjltsx2vwSf2V/7O53xjdoNxvFmQ18+VWleUuZu+Nj4zIqV5yXUw48l5i5fAbiUL/yn9olR6xRcrYNWwp4hcwLx/6gLBm2CE="
