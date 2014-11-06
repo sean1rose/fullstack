@@ -17,5 +17,4 @@ if [[ $TRAVIS_PULL_REQUEST == "false" ]]
   then
     echo $TRAVIS_BRANCH
 fi
-echo
 echo "...done."

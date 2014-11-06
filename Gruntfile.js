@@ -370,7 +370,6 @@ module.exports = function (grunt) {
     },
 
     buildcontrol: {
-      remote: 'git@heroku.com:mountaincolt.git',
       options: {
         dir: 'dist',
         commit: true,
@@ -380,7 +379,7 @@ module.exports = function (grunt) {
       },
       heroku: {
         options: {
-          remote: 'heroku',
+          remote: 'git@heroku.com:mountaincolt.git',
           branch: 'master'
         }
       },
