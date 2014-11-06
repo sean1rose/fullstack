@@ -14,17 +14,12 @@
 
 <div class="container">
   <div class="row">
-    <!-- REPLACE WITH NG-REPEAT -->
-
-<!-- ng-class="{'project':true, 'col-md-6':true}" -->
-    <!-- ng-class="{'col-md-4': (!pMod1 && !pMod2) || (pMod1 && $index!==0) || (pMod2 && $index!==0 || pMod2 && $index!==1), 'col-md-12':pMod1, 'col-md-6':pMod2 && ($index===1 || $index===2)}" -->
-
     <div ng-repeat="project in projects" ng-class="{
       'col-md-6':pMod2 && ($index===0 || $index===1),
-      'col-md-12':pMod2 && ($index!==0 && $index!==1)
+      'col-md-4':(pMod2 && $index!==0 && $index!==1) || (pMod1 && $index!==0) || pMod0,
+      'col-md-12':pMod1 && ($index===0),
     }">
       <div class="project">
-        {{'remainder: ' + projects.length % 3}} {{'index: ' + $index}}
       </div>
     </div>
 
