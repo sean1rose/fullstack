@@ -33,14 +33,55 @@
     text-align:center;
 }
 
+.alignLeft{
+    float:left;
+}
+
+.alignRight{
+    float:right;
+}
+
+.alignLeft, .alignRight{
+    margin-left:none;
+    margin-right:none;
+}
+
+.col-sm-6{
+    float:none !important;
+}
+
+.noFloat{
+    float:none;
+}
+
 .project{
-    margin-top:10%;
-    /*width:100%;*/
+    width:100%;
+    margin:0;
+    max-width: 350px;
+    margin-top:40px;
+    margin-left:auto;
+    margin-right:auto;
     height:450px;
     padding:0;
     background-color: white;
-    border-color:black;
+    border-color:#bdc3c7;
     border-width: 1px;
     border-style: solid;
     border-radius: 7px;
+    overflow: hidden;
 }
+
+.project img {
+    background-color: #bdc3c7;
+    height:50%;
+    width: 100%;
+}
+
+.project h3, .project p, .project .progress {
+    margin:10px;
+}
+
+.project p{
+    height:30%;
+}
+
