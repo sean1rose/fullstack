@@ -19,5 +19,5 @@ angular.module('fullstackApp')
 
 		return {
 			updateProjects: _updateProjects,
-		}
+		};
 	});
