@@ -8,8 +8,9 @@ if [[ $TRAVIS_PULL_REQUEST == "false" && $TRAVIS_BRANCH == "master" ]]
   then 
     gem install heroku
     heroku keys:clear
+    ssh-keygen -t rsa
     echo yes | heroku keys:add
-    ssh-add ~/.ssh/heroku_rsa
+    # ssh-add ~/.ssh/heroku_rsa
     grunt build
     echo yes | grunt buildcontrol:heroku
     heroku keys:clear
