@@ -6,8 +6,10 @@ echo "   CheckHostIP no" >> ~/.ssh/config;
 echo "   UserKnownHostsFile=/dev/null" >> ~/.ssh/config;
 if [[ $TRAVIS_PULL_REQUEST == "false" && $TRAVIS_BRANCH == "master" ]]
   then 
-    gem install heroku
-    heroku keys:clear
+    npm install heroku
+    git remote add git@heroku.com:mtcolt.git
+    wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+    heroku keys: clear
     # ssh-keygen -t rsa
     echo yes | heroku keys:add
     # ssh-add ~/.ssh/heroku_rsa
