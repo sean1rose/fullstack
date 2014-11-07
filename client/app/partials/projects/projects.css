@@ -24,12 +24,11 @@
 }
 
 .project{
-    width:100%;
     margin:0;
     max-width: 350px;
     margin-top:40px;
-    margin-left:auto;
-    margin-right:auto;
+    margin-left:20px;
+    margin-right:20px;
     height:450px;
     padding:0;
     background-color: white;
@@ -38,6 +37,8 @@
     border-style: solid;
     border-radius: 7px;
     overflow: hidden;
+    display:inline-block;
+    text-align: left;
 }
 
 .project img {
