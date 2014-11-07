@@ -1,0 +1,91 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<header class="hero-unit" id="banner">
+  <div class="container">
+    <h1>Create New Project</h1>
+    <p class="lead">Submit your project information to harness the power of distributed computing</p>
+  </div>
+</header>
+
+
+<body>
+	<div class="container">
+		<div class="col-md-6 col-md-offset-3">
+
+			<!-- PAGE TITLE -->
+			<div class="page-header">
+				<h1><span></span>Add Your Project Information</h1>
+			</div>
+
+			<!-- SHOW ERROR/SUCCESS MESSAGES -->
+			<div id="messages"></div>
+
+			<!-- FORM -->
+			<form>
+				<!-- Project Name -->
+				<div id="project-name" class="form-group">
+					<label>Project Name</label>
+					<input type="text" name="project-name" class="form-control" placeholder="">
+					<span class="help-block"></span>
+				</div>
+
+				<!-- Project Creator -->
+				<div id="project-creator" class="form-group">
+					<label>Project Creator</label>
+					<input type="text" name="project-creator" class="form-control" placeholder="">
+					<span class="help-block"></span>
+				</div>
+
+				<!-- Project Organization -->
+				<div id="project-organization" class="form-group">
+					<label>Project Organization</label>
+					<input type="text" name="project-organization" class="form-control" placeholder="">
+					<span class="help-block"></span>
+				</div>
+
+				<!-- Project Description - uses textarea rather than input-->
+				<div id="project-description" class="form-group">
+					<label>Project Description</label>
+					<textarea type="text" name="project-description" class="form-control" rows="5" placeholder=""></textarea>
+					<span class="help-block"></span>
+				</div>
+
+				<!-- Project URL -->
+				<div id="project-url" class="form-group">
+					<label>Project URL</label>
+					<input type="text" name="project-organization" class="form-control" placeholder="">
+					<span class="help-block"></span>
+				</div>
+
+				<!-- Project Duration -->
+				<div id="project-duration" class="form-group">
+					<label>Project Duration</label>
+					<input type="text" name="project-duration" class="form-control" placeholder="">
+					<span class="help-block"></span>
+				</div>
+
+				<!-- Computing Power Goals -->
+				<div id="computing-power-goals" class="form-group">
+					<label>Computing Power Goals</label>
+					<input type="text" name="computing-power-goals" class="form-control" placeholder="">
+					<span class="help-block"></span>
+				</div>
+				
+				<br>
+				<!-- SUBMIT BUTTON -->
+				<button type="submit" class="btn btn-success btn-lg btn-block">
+					<span class="glyphicon glyphicon-flash"></span> Submit!
+				</button>
+			</form>
+		</div>
+	</div>
+<footer class="footer">
+  <div class="container">
+      <p>
+         <a href="/">CrowdCrunch</a>
+       </p>
+  </div>
+</footer>
+</body>
+
+

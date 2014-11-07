@@ -11,6 +11,9 @@ router.get('/', controller.index);
 // get one project
 router.get('/:id', controller.show);
 
+// get create project page?
+router.get('/projects', controller.index);
+
 // create project
 router.post('/', controller.create);
 
