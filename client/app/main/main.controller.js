@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('fullstackApp')
-  .controller('MainCtrl', function ($scope, $http) {
+  .controller('MainCtrl', function () {
     // $scope.awesomeThings = [];
     // $scope.projects = [1,2];
     // $scope.pMod0 = $scope.projects.length % 3 === 0;
