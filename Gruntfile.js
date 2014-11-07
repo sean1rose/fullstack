@@ -380,7 +380,7 @@ module.exports = function (grunt) {
       },
       heroku: {
         options: {
-          remote: 'git@heroku.com:mtcolt.git',
+          remote: 'heroku',
           branch: 'master'
         }
       },
