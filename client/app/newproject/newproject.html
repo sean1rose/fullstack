@@ -34,9 +34,8 @@
 				<!-- Password -->
 				<div id="project-password" class="form-group" ng-class="{ 'has-error' : projectForm.password.$invalid && !projectForm.password.$pristine }">
 					<label>Password</label>
-					<input type="{{inputType}}" name="password" class="form-control" placeholder="Enter desired password for logging in..." ng-model="projectData.password" ng-minlength="3" ng-maxlength="=50" required>
+					<input type="{{inputType}}" name="password" class="form-control" placeholder="Enter a desired password for logging in..." ng-model="projectData.password" ng-minlength="3" required>
 					<span ng-show="projectForm.password.$error.minlength" class="help-block">Password must contain at least 3 characters.</span>
-					<span ng-show="projectForm.password.$error.maxlength" class="help-block">Password cannot be longer than 32 characters.</span>
 				</div>
 
 				<!-- Project Name -->
@@ -64,23 +63,16 @@
 
 				<!-- Project Description - uses textarea rather than input-->
 				<div id="project-description" class="form-group" ng-class="{ 'has-error' : projectForm.projectDescription.$invalid && !projectForm.projectDescription.$pristine }">
-					<label>Project Name</label>
-					<input type="text" name="projectDescription" class="form-control" placeholder="Enter the name of your project..." ng-model="projectData.projectDescription" ng-minlength="3" ng-maxlength="5000" required>
-					<p ng-show="projectForm.projectDescription.$error.minlength" class="help-block">Project Descrition is too short.</p>
-					<p ng-show="projectForm.projectDescription.$error.maxlength" class="help-block">Project Name is too long.</p>
-				</div>
-
-				<!-- Project URL -->
-				<div id="project-url" class="form-group">
-					<label>Project URL</label>
-					<input type="text" name="url" class="form-control" placeholder="Enter a URL..." ng-model="projectData.projectUrl">
-					<span class="help-block"></span>
+					<label>Project Description</label>
+					<textarea type="text" name="projectDescription" class="form-control" placeholder="Enter the name of your project..." ng-model="projectData.projectdescription" rows="5" ng-minlength="3" ng-maxlength="5000" required></textarea>
+					<p ng-show="projectForm.projectDescription.$error.minlength" class="help-block">Enter a Project Description.</p>
+					<p ng-show="projectForm.projectDescription.$error.maxlength" class="help-block">Project Description is too long.</p>
 				</div>
 
 				<!-- Project Duration -->
 				<div id="project-duration" class="form-group">
 					<label>Project Duration</label>
-					<input type="text" name="duration" class="form-control" placeholder="Enter the duration of your project..." ng-model="projectData.projectDuration">
+					<input type="text" name="duration" class="form-control" placeholder="Enter the duration of your project..." ng-model="projectData.projectduration">
 					<span class="help-block"></span>
 				</div>
 
