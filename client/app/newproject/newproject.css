@@ -2,6 +2,26 @@
     margin: 20px 0;
 }
 
+/*.error::after {
+    border-color: red;
+    position: absolute;
+    font-family: glyphicon glyphicon-remove;
+    right: 10px;
+    line-height: 2;
+    color: red;
+    content: '\e014';
+}
+
+.valid::after {
+    border-color: green;
+    position: absolute;
+    font-family: $glyphicon glyphicon-remove;
+    right: 10px;
+    line-height: 2;
+    color: green;
+    content: '\e013';
+}*/
+
 #banner {
     border-bottom: none;
     margin-top: -20px;

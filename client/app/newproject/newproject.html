@@ -14,60 +14,80 @@
 
 			<!-- PAGE TITLE -->
 			<div class="page-header">
-				<h1><span></span>Add Your Project Information</h1>
+				<h2><span></span>Register Your Project Information</h2>
 			</div>
 
 			<!-- SHOW ERROR/SUCCESS MESSAGES -->
-			<div id="messages"></div>
+			<div id="messages" ng-show="message">{{message}}</div>
 
-			<!-- FORM -->
-			<form>
+			<!-- FORM, novalidate disables brower's native form validation so value of email won't set unless it passes input validation -->
+			<form name="projectForm" novalidate ng-submit="submitForm()">
+
+				<!-- Username -->
+				<div id="project-username" class="form-group" ng-class="{ 'has-error' : projectForm.username.$invalid && !projectForm.username.$pristine }">
+					<label>Username</label>
+					<input type="text" name="username" class="form-control" placeholder="Enter a desired username for logging in..." ng-model="projectData.username" ng-minlength="3" ng-maxlength="50" required>
+					<p ng-show="projectForm.username.$error.minlength" class="help-block">Username is too short.</p>
+					<p ng-show="projectForm.username.$error.maxlength" class="help-block">Username is too long.</p>
+				</div>
+
+				<!-- Password -->
+				<div id="project-password" class="form-group" ng-class="{ 'has-error' : projectForm.password.$invalid && !projectForm.password.$pristine }">
+					<label>Password</label>
+					<input type="{{inputType}}" name="password" class="form-control" placeholder="Enter desired password for logging in..." ng-model="projectData.password" ng-minlength="3" ng-maxlength="=50" required>
+					<span ng-show="projectForm.password.$error.minlength" class="help-block">Password must contain at least 3 characters.</span>
+					<span ng-show="projectForm.password.$error.maxlength" class="help-block">Password cannot be longer than 32 characters.</span>
+				</div>
+
 				<!-- Project Name -->
-				<div id="project-name" class="form-group">
+				<div id="project-name" class="form-group" ng-class="{ 'has-error' : projectForm.projectname.$invalid && !projectForm.projectname.$pristine }">
 					<label>Project Name</label>
-					<input type="text" name="project-name" class="form-control" placeholder="">
-					<span class="help-block"></span>
+					<input type="text" name="projectname" class="form-control" placeholder="Enter the name of your project..." ng-model="projectData.projectname" ng-minlength="3" ng-maxlength="50" required>
+					<p ng-show="projectForm.projectname.$error.minlength" class="help-block">Project Name is too short.</p>
+					<p ng-show="projectForm.projectname.$error.maxlength" class="help-block">Project Name is too long.</p>
 				</div>
 
-				<!-- Project Creator -->
-				<div id="project-creator" class="form-group">
-					<label>Project Creator</label>
-					<input type="text" name="project-creator" class="form-control" placeholder="">
-					<span class="help-block"></span>
+				<!-- Project Developer/Creator -->
+				<div id="project-developer" class="form-group" ng-class="{ 'has-error' : projectForm.developer.$invalid && !projectForm.developer.$pristine }">
+					<label>Project Developer</label>
+					<input type="text" name="developer" class="form-control" placeholder="Enter the name of your project's developer..." ng-model="projectData.developer" ng-minlength="3" ng-maxlength="50" required>
+					<p ng-show="projectForm.developer.$error.minlength" class="help-block">Project Developer's Name is too short.</p>
+					<p ng-show="projectForm.developer.$error.maxlength" class="help-block">Project Developer's Name is too long.</p>
 				</div>
 
-				<!-- Project Organization -->
-				<div id="project-organization" class="form-group">
-					<label>Project Organization</label>
-					<input type="text" name="project-organization" class="form-control" placeholder="">
-					<span class="help-block"></span>
+				<!-- Project Email -->
+				<div id="project-email" class="form-group" ng-class="{ 'has-error' : projectForm.email.$invalid && !projectForm.email.$pristine }">
+					<label>Project Email Address</label>
+					<input type="email" name="email" class="form-control" placeholder="Enter an email address..." ng-model="projectData.email">
+					<p ng-show="projectForm.email.$invalid && !projectForm.email.$pristine" class="help-block">Enter a valid email.</p>
 				</div>
 
 				<!-- Project Description - uses textarea rather than input-->
-				<div id="project-description" class="form-group">
-					<label>Project Description</label>
-					<textarea type="text" name="project-description" class="form-control" rows="5" placeholder=""></textarea>
-					<span class="help-block"></span>
+				<div id="project-description" class="form-group" ng-class="{ 'has-error' : projectForm.projectDescription.$invalid && !projectForm.projectDescription.$pristine }">
+					<label>Project Name</label>
+					<input type="text" name="projectDescription" class="form-control" placeholder="Enter the name of your project..." ng-model="projectData.projectDescription" ng-minlength="3" ng-maxlength="5000" required>
+					<p ng-show="projectForm.projectDescription.$error.minlength" class="help-block">Project Descrition is too short.</p>
+					<p ng-show="projectForm.projectDescription.$error.maxlength" class="help-block">Project Name is too long.</p>
 				</div>
 
 				<!-- Project URL -->
 				<div id="project-url" class="form-group">
 					<label>Project URL</label>
-					<input type="text" name="project-organization" class="form-control" placeholder="">
+					<input type="text" name="url" class="form-control" placeholder="Enter a URL..." ng-model="projectData.projectUrl">
 					<span class="help-block"></span>
 				</div>
 
 				<!-- Project Duration -->
 				<div id="project-duration" class="form-group">
 					<label>Project Duration</label>
-					<input type="text" name="project-duration" class="form-control" placeholder="">
+					<input type="text" name="duration" class="form-control" placeholder="Enter the duration of your project..." ng-model="projectData.projectDuration">
 					<span class="help-block"></span>
 				</div>
 
 				<!-- Computing Power Goals -->
 				<div id="computing-power-goals" class="form-group">
 					<label>Computing Power Goals</label>
-					<input type="text" name="computing-power-goals" class="form-control" placeholder="">
+					<input type="text" name="computing-power-goals" class="form-control" placeholder="Enter desired computer processing goal..." ng-model="projectData.goals">
 					<span class="help-block"></span>
 				</div>
 				
