@@ -31,6 +31,7 @@ exports.show = function(req, res) {
 
 // Creates a new project in the DB.
 exports.create = function(req, res) {
+  console.log('CREATE is called!');
   Project.create(req.body, function(err, project) {
     if(err) { return handleError(res, err); }
     return res.json(201, project);
