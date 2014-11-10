@@ -23,21 +23,6 @@
 			<!-- FORM, novalidate disables brower's native form validation so value of email won't set unless it passes input validation -->
 			<form name="projectForm" novalidate ng-submit="submitForm()">
 
-				<!-- Username -->
-				<div id="project-username" class="form-group" ng-class="{ 'has-error' : projectForm.username.$invalid && !projectForm.username.$pristine }">
-					<label>Username</label>
-					<input type="text" name="username" class="form-control" placeholder="Enter a desired username for logging in..." ng-model="projectData.username" ng-minlength="3" ng-maxlength="50" required>
-					<p ng-show="projectForm.username.$error.minlength" class="help-block">Username is too short.</p>
-					<p ng-show="projectForm.username.$error.maxlength" class="help-block">Username is too long.</p>
-				</div>
-
-				<!-- Password -->
-				<div id="project-password" class="form-group" ng-class="{ 'has-error' : projectForm.password.$invalid && !projectForm.password.$pristine }">
-					<label>Password</label>
-					<input type="{{inputType}}" name="password" class="form-control" placeholder="Enter a desired password for logging in..." ng-model="projectData.password" ng-minlength="3" required>
-					<span ng-show="projectForm.password.$error.minlength" class="help-block">Password must contain at least 3 characters.</span>
-				</div>
-
 				<!-- Project Name -->
 				<div id="project-name" class="form-group" ng-class="{ 'has-error' : projectForm.projectname.$invalid && !projectForm.projectname.$pristine }">
 					<label>Project Name</label>
@@ -52,13 +37,6 @@
 					<input type="text" name="developer" class="form-control" placeholder="Enter the name of your project's developer..." ng-model="projectData.developer" ng-minlength="3" ng-maxlength="50" required>
 					<p ng-show="projectForm.developer.$error.minlength" class="help-block">Project Developer's Name is too short.</p>
 					<p ng-show="projectForm.developer.$error.maxlength" class="help-block">Project Developer's Name is too long.</p>
-				</div>
-
-				<!-- Project Email -->
-				<div id="project-email" class="form-group" ng-class="{ 'has-error' : projectForm.email.$invalid && !projectForm.email.$pristine }">
-					<label>Project Email Address</label>
-					<input type="email" name="email" class="form-control" placeholder="Enter an email address..." ng-model="projectData.email">
-					<p ng-show="projectForm.email.$invalid && !projectForm.email.$pristine" class="help-block">Enter a valid email.</p>
 				</div>
 
 				<!-- Project Description - uses textarea rather than input-->
@@ -86,9 +64,10 @@
 				<br>
 				<!-- SUBMIT BUTTON -->
 				<button type="submit" class="btn btn-success btn-lg btn-block">
-					<span class="glyphicon glyphicon-flash"></span> Submit!
+					Register
 				</button>
 			</form>
+			<hr>
 		</div>
 	</div>
 <footer class="footer">

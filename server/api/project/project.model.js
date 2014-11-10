@@ -6,9 +6,9 @@ var crypto = require('crypto');
 var authTypes = ['github', 'twitter', 'facebook', 'google'];
 
 var ProjectSchema = new Schema({
-  username: String,
-  hashedPassword: String,
-  password: String,
+  // username: String,
+  // hashedPassword: String,
+  // password: String,
   projectname: String,
   projectdeveloper: String,
   email: { type: String, lowercase: true },
@@ -16,7 +16,8 @@ var ProjectSchema = new Schema({
   projectduration: String,
   projectgoals: String,
   image: {data:Buffer, contentType: String},
-  id: Number
+  id: Number,
+  userId: String
 });
 
 // Virtuals - what are virtuals???

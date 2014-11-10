@@ -4,6 +4,7 @@ angular.module('fullstackApp')
   .controller('SignupCtrl', function ($scope, Auth, $location, $window) {
     $scope.user = {};
     $scope.errors = {};
+    $scope.inputType = 'password';
 
     $scope.register = function(form) {
       $scope.submitted = true;
@@ -14,9 +15,10 @@ angular.module('fullstackApp')
           email: $scope.user.email,
           password: $scope.user.password
         })
+        // need some kind of UI alert letting them know signup was successful
         .then( function() {
           // Account created, redirect to home
-          $location.path('/');
+          $location.path('/newproject');
         })
         .catch( function(err) {
           err = err.data;

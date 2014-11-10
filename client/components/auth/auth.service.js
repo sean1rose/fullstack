@@ -20,6 +20,7 @@ angular.module('fullstackApp')
         var cb = callback || angular.noop;
         var deferred = $q.defer();
 
+        // /api/projects
         $http.post('/auth/local', {
           email: user.email,
           password: user.password
