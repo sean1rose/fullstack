@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('fullstackApp')
-  .controller('NewProjectCtrl', ['$scope', 'Auth', '$location', '$window', '$http', function ($scope, Auth, $location, $window, $http) {
+  .controller('NewProjectCtrl', ['$scope', '$location', '$window', '$http', function ($scope, $location, $window, $http, Project) {
     $scope.projectData = {};
     $scope.errors = {};
     $scope.inputType = 'password';
@@ -10,53 +10,52 @@ angular.module('fullstackApp')
       $scope.submitted = true;
       if ($scope.projectForm.$valid){
 
-        // see client/components/auth/auth.service.js --> createUser ==> return User.save
-        // need to create a new project in mongo using Project.save??? rather than post?
-        // maybe even create a factory??? see how signup.controller.js works w/ auth.service.js
-        $http.post('/api/projects', {
-          // user should be logged in already
-          //need to store this to projects database
+        var currentProject = {
           projectname: $scope.projectData.projectname,
           projectdeveloper: $scope.projectData.developer,
           projectdescription: $scope.projectData.projectdescription,
           projectduration: $scope.projectData.projectduration,
           projectgoals: $scope.projectData.projectgoals
-          // projectuser: need to id the project's user
-        })
+        };
+        //submit --> http request --> route
+        // route hits the server --> forward onto function (calls mongoose)
+
+        // var data = $scope.projectData;
+        // Project.save(data, function(data){
+        //   console.log('data is ', data);
+        // },
+        // function(err){
+        //   if (err) return handleError(err);
+        //   console.log('data is ', data);
+        // })
+
+        // see client/components/auth/auth.service.js --> createUser ==> return User.save
+        // need to create a new project in mongo using Project.save??? rather than post?
+        // maybe even create a factory??? see how signup.controller.js works w/ auth.service.js
+
+        $http.post('/api/projects/', currentProject)
         .success(function(data){
-          console.log('data is ', data);
+          console.log('data to be saved to mongo...', data);
+
+          // project.save(function(err, data){
+          //   var project = new Project(data);
+          //   if (err){
+          //     console.log('errror is ', err);
+          //     res.json(err);
+          //   } else {
+          //     console.log('success saving to mongo!');
+          //     res.json(data);
+          //   }
+          // })
         })
         .error(function(err){
           console.log('error', err);
         })
         .then(function(){
+          // probably want to redirect to that project page
           $location.path('/');
         })
-
-
-        // Auth.createUser({
-        //   username: $scope.projectData.username,
-        //   password: $scope.projectData.password,
-        // })
-        // .then(function(){
-        //   // probably want to redirect to a page for further developer info
-        //   $location.path('/');
-        // })
-        // .catch(function(err){
-        //   err = err.data;
-        //   $scope.errors = {};
-
-        //   // update validity of form fields that match the mongoose errors? not sure what this does...
-        //   angular.forEach(err.errors, function(error, field){
-        //     form[field].$setValidity('mongoose', false);
-        //     $scope.errors[field] = error.message;
-        //   });
-        // });
       }
     }
-
-    $scope.loginOauth = function(provider){
-      $window.location.href = '/auth/' + provider;
-    };
 
   }]);
