@@ -1,0 +1,41 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<header class="hero-unit" id="banner">
+  <div class="container">
+    <h1>Crowd Crunch</h1>
+    <p class="lead">THIS IS THE (BROWSE)ALL PROJECTS PAGE</p>
+  </div>
+</header>
+
+<body>
+	<div ng-controller='AllProjectsController'>
+		<div id='project' ng-class="">
+		
+		<div  class="projectView col-md-8">
+		  <div class='project' ng-repeat='project in projects | filter:search'>
+                      <h3 class='name'>{{projects.name}} {{projects.developer}}!</h3>
+                  
+		    <p class='description'>{{projects.description}}</p>
+		    <p class='duration'>{{projects.duration}} {{projects.goals}}</p>
+		  </div>
+		 </div>
+
+
+<!-- 	    <h1>{{ projects.name }}!</h1>
+	    <h2>{{ projects.developer }}</h2>
+	    <h3>{{ projects.description }}</h3>
+	    <h3>{{ projects.duration }}</h3>
+	    <h3>{{ projects.goals }}</h3> -->
+		</div>
+	</div>
+	<footer class="footer">
+	  <div class="container">
+	      <p>
+	         <a href="/">CrowdCrunch</a>
+	       </p>
+	  </div>
+	</footer>
+</body>
+
+<!-- <div ng-include="'app/partials/projects/projects.html'"></div>
+ -->

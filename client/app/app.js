@@ -1,6 +1,7 @@
 'use strict';
 
 angular.module('fullstackApp', [
+  'fullstack.services',
   'ngCookies',
   'ngResource',
   'ngSanitize',
