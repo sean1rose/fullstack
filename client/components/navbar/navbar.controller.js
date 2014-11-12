@@ -8,6 +8,9 @@ angular.module('fullstackApp')
     }, {
       'title': 'New Project',
       'link': '/newproject'
+    }, {
+      'title': 'Browse Projects',
+      'link': '/project'
     }];
 
     $scope.isCollapsed = true;
