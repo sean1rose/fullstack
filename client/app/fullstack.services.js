@@ -26,7 +26,11 @@ angular.module('fullstack.services', [])
       console.log('_getProject ID', id);
       return $http({
         method: 'GET',
-        url: '/api/' + id
+        // url: '/' + id
+        // url: '/api/'
+        // url: '/api/project/' + id
+        //url: '/api/projects/' + id
+        url: '/api/projects/' + id
       })
       .success(function(data){
         console.log('project Data - ', data);
