@@ -1,4 +1,4 @@
-'use strict';
+  'use strict';
 
 angular.module('fullstackApp')
   .controller('NewProjectCtrl', ['$scope', '$location', '$window', '$http', function ($scope, $location, $window, $http, Project) {
@@ -15,8 +15,10 @@ angular.module('fullstackApp')
           projectdeveloper: $scope.projectData.developer,
           projectdescription: $scope.projectData.projectdescription,
           projectduration: $scope.projectData.projectduration,
-          projectgoals: $scope.projectData.projectgoals
+          projectgoals: $scope.projectData.projectgoals,
+          //project_id: $scope.projectData.projectname
         };
+        console.log("project_id is - ", currentProject.project_id);
         //submit --> http request --> route
         // route hits the server --> forward onto function (calls mongoose)
 
@@ -36,6 +38,7 @@ angular.module('fullstackApp')
         $http.post('/api/projects/', currentProject)
         .success(function(data){
           console.log('data to be saved to mongo...', data);
+          // how does the info sent thru this post request make its way to the mongodb database (what file/code makes it happen?)
 
           // project.save(function(err, data){
           //   var project = new Project(data);

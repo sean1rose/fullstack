@@ -3,16 +3,16 @@
 <header class="hero-unit" id="banner">
   <div class="container">
     <h1>Crowd Crunch</h1>
-    <p class="lead">THIS IS THE (BROWSE) ALL PROJECTS PAGE</p>
+    <p class="lead">THIS IS AN INDIVIDUAL PROJECT PAGE</p>
   </div>
 </header>
 
 <!-- This is exactly the same as partials/projects/projects.html EXCEPT for ng-controller="ProjectsCtrl", so clean this up-->
-<div class="container" ng-controller="AllProjectsController">
+<div class="container" ng-controller="IndividualProjectController">
   <div class="row" style="text-align:center">
-      <div class="project" ng-repeat="project in projects">
+      <div class="project" ng-model="project">
         <img ng-src="assets/images/fibre-optic.jpg"/>
-        <h3><a ng-href="/project/{{project._id}}">{{project.project_id}}</a></h3>
+        <h3>{{project.projectname}}</h3>
         <h5>{{project.projectdeveloper}}</h5>
         <h5>{{project.projectdescription}}</h5>
         <h5>{{project.projectduration}}</h5>

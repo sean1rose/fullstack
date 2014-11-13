@@ -9,12 +9,16 @@ var router = express.Router();
 router.get('/', controller.index);
 
 // get one project
+//http.get('/api/id') // ('/api/:id')
+//http.get('/projects/id')
+//http.get('/id')
 router.get('/:id', controller.show);
 
 // get create project page?
 router.get('/projects', controller.index);
 
 // create project
+// $http.post('/api/projects/') --> newproject.controller.js
 router.post('/', controller.create);
 
 // update project
