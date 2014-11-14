@@ -28,7 +28,7 @@
 				<!-- Project Name -->
 				<div id="project-name" class="form-group" ng-class="{ 'has-error' : projectForm.projectname.$invalid && !projectForm.projectname.$pristine }">
 					<label>Project Name</label>
-					<input type="text" name="projectname" class="form-control" placeholder="Enter the name of your project..." ng-model="projectData.projectname" ng-minlength="3" ng-maxlength="50" required>
+					<input type="text" name="projectname" class="form-control" placeholder="Enter the name of your project..." ng-model="projectData.projectname" ng-minlength="3" ng-maxlength="30" required>
 					<p ng-show="projectForm.projectname.$error.minlength" class="help-block">Project Name is too short.</p>
 					<p ng-show="projectForm.projectname.$error.maxlength" class="help-block">Project Name is too long.</p>
 				</div>
@@ -44,7 +44,7 @@
 				<!-- Project Description - uses textarea rather than input-->
 				<div id="project-description" class="form-group" ng-class="{ 'has-error' : projectForm.projectDescription.$invalid && !projectForm.projectDescription.$pristine }">
 					<label>Project Description</label>
-					<textarea type="text" name="projectDescription" class="form-control" placeholder="Enter the name of your project..." ng-model="projectData.projectdescription" rows="5" ng-minlength="3" ng-maxlength="5000" required></textarea>
+					<textarea type="text" name="projectDescription" class="form-control" placeholder="Enter a short description of your project..." ng-model="projectData.projectdescription" rows="5" ng-minlength="3" ng-maxlength="150" required></textarea>
 					<p ng-show="projectForm.projectDescription.$error.minlength" class="help-block">Enter a Project Description.</p>
 					<p ng-show="projectForm.projectDescription.$error.maxlength" class="help-block">Project Description is too long.</p>
 				</div>
@@ -59,7 +59,7 @@
 				<!-- Computing Power Goals -->
 				<div id="computing-power-goals" class="form-group">
 					<label>Computing Power Goals</label>
-					<input type="text" name="computing-power-goals" class="form-control" placeholder="Enter desired computer processing goal..." ng-model="projectData.goals">
+					<input type="text" name="computing-power-goals" class="form-control" placeholder="Enter desired computer processing goal..." ng-model="projectData.projectgoals">
 					<span class="help-block"></span>
 				</div>
 				
