@@ -1,3 +1,68 @@
+.divider 
+{
+    border-top:1px solid rgba(0,0,0,0.1);
+    }
+.emphasis 
+{
+    border-top: 4px solid transparent;
+    }
+.emphasis:hover 
+{
+    border-top: 4px solid #1abc9c;
+    }
+.emphasis h2
+{
+    margin-bottom:0;
+    }
+span.tags 
+{
+    background: #1abc9c;
+    border-radius: 2px;
+    color: #f5f5f5;
+    font-weight: bold;
+    padding: 2px 4px;
+    }
+.dropdown-menu 
+{
+    background-color: #34495e;    
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    width: 250px;
+    margin-left: -125px;
+    left: 50%;
+    }
+.dropdown-menu .divider 
+{
+    background:none;    
+    }
+.dropdown-menu>li>a
+{
+    color:#f5f5f5;
+    }
+.dropup .dropdown-menu 
+{
+    margin-bottom:10px;
+    }
+.dropup .dropdown-menu:before 
+{
+    content: "";
+    border-top: 10px solid #34495e;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    margin-left: -10px;
+    z-index: 10;
+    }
+
+
+
+
+
+
+
+
 .center{
     text-align:center;
 }
@@ -25,7 +90,8 @@
 
 .project{
     margin:0;
-    max-width: 350px;
+    /* max-width: 350px*/
+    max-width: 325px;
     margin-top: 40px;
     margin-left:20px;
     margin-right:20px;
@@ -40,6 +106,7 @@
     overflow: hidden;
     display:inline-block;
     text-align: center;
+    font-weight: 200;
 }
 
 .project img {
@@ -50,15 +117,21 @@
 
 .project h3, .project p,  {
     margin:10px;
+    font-weight: 300;
 }
 
 .project h4 {
     text-align: center;
-    font-weight: 700;
+    font-weight: 200;
+}
+
+.project h5 {
+    font-weight: 200;
 }
 
 .project h6 {
     text-align: center;
+    font-weight 100;
 }
 
 .project p{
@@ -68,9 +141,13 @@
 .projectcard {
     color: black;
     font-family: Times New Roman;
-    padding: 10px 10px 10px 10px;
+    padding: 5px 5px 5px 5px;
 }
 
 .progresscontainer {
-    padding: 20px 20px 20px 20px;
+    padding: 1px 1px 1px 1px;
+}
+
+#bartext {
+    color: black;
 }
