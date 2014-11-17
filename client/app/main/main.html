@@ -11,7 +11,7 @@
                     <hr class="intro-divider">
                     <ul class="list-inline intro-social-buttons">
 		                    <li>
-                            <a href="#" class="btn btn-default btn-lg"><i class="fa fa-cloud-download fa-fw"></i> <span class="network-name">Download App</span></a>
+                            <a href="#" id="downloadbutton" class="wow btn btn-default btn-lg" data-wow-delay="0.6s"><i class="fa fa-cloud-download fa-fw"></i> <span class="network-name">Download App</span></a>
                         </li>
 		                </ul>
                 </div>
@@ -22,4 +22,65 @@
 </div>
 <!-- /.intro-header -->
 
-<div ng-include="'app/partials/projects/projects.html'"></div>
+<br><br>
+
+<!-- User Info Section -->
+<div id ="useit" class="content-section-a">
+
+    <div class="container">
+        
+        <div class="row">
+        
+            <div class="col-sm-5 pull-right wow fadeInRightBig">
+                <img class="img-responsive " src="./assets/images/iphone.png" alt="">
+            </div>
+            
+            <div class="col-sm-5 wow fadeInLeftBig"  data-animation-delay="200">   
+                <h2 class="section-heading">Researchers and Developers...</h2>
+                <div class="sub-title lead3">Have a problem worth solving, but need a bit more horsepower?</div>
+                
+                <p class="lead">
+                    In his igitur partibus duabus nihil erat, quod Zeno commuta rest gestiret. 
+                    Sed virtutem ipsam inchoavit, nihil ampliusuma. Scien tiam pollicentur, 
+                    uam non erat mirum sapientiae lorem cupido
+                    patria esse cariorem. Quae qui non vident, nihilamane umquam magnum ac cognitione.
+                </p>
+
+                 <p><a class="btn btn-embossed btn-primary" href="#" role="button">Upload Your Project</a> 
+                 <a class="btn btn-embossed btn-info" href="#" role="button">Read the Docs</a></p>
+            </div>   
+        </div>
+    </div>
+    <!-- /.container -->
+</div>
+
+<!-- Researcher Info Section -->
+<div id ="useit" class="content-section-a">
+
+    <div class="container">
+        
+        <div class="row">
+        
+            <div class="col-sm-5 wow fadeInLeftBig">
+                <img class="img-responsive " src="./assets/images/iphone.png" alt="">
+            </div>
+            
+            <div class="col-sm-5 wow pull-right fadeInRightBig"  data-animation-delay="200">   
+                <h2 class="section-heading">Have Computing Power to Spare?</h2>
+                <div class="sub-title lead3">Choose a project of your liking and contribute.</div>
+                <p class="lead">
+                    In his igitur partibus duabus nihil erat, quod Zeno commuta rest gestiret. 
+                    Sed virtutem ipsam inchoavit, nihil ampliusuma. Scien tiam pollicentur, 
+                    uam non erat mirum sapientiae lorem cupido
+                    patria esse cariorem. Quae qui non vident, nihilamane umquam magnum ac cognitione.
+                </p>
+
+                 <p><a class="btn btn-embossed btn-info" href="#" role="button">Download the App</a> 
+                 </p>
+            </div>   
+        </div>
+    </div>
+    <!-- /.container -->
+</div>
+
+<div id="projectcontainer" ng-include="'app/partials/projects/projects.html'"></div>
