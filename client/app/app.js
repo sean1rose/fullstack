@@ -7,8 +7,7 @@ angular.module('fullstackApp', [
   'ngSanitize',
   'ui.router',
   'ui.bootstrap',
-  'ngAnimate',
-  'ngRoute'
+  'ngAnimate'
 ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
     $urlRouterProvider
