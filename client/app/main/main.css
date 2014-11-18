@@ -98,3 +98,14 @@ h6 {
     border-top: 1px solid #E5E5E5;
 }
 
+#downloadbutton {
+    -webkit-animation: bounceInDown 1s;
+    -moz-animation: bounceInDown 1s;
+    -ms-animation: bounceInDown 1s;
+    animation: bounceInDown 1s;
+}
+
+#projectcontainer {
+    background-color: #f8f8f8;
+}
+
