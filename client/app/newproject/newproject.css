@@ -1,46 +1,14 @@
-.thing-form {
-    margin: 20px 0;
-}
-
-/*.error::after {
-    border-color: red;
-    position: absolute;
-    font-family: glyphicon glyphicon-remove;
-    right: 10px;
-    line-height: 2;
-    color: red;
-    content: '\e014';
-}
-
-.valid::after {
-    border-color: green;
-    position: absolute;
-    font-family: $glyphicon glyphicon-remove;
-    right: 10px;
-    line-height: 2;
-    color: green;
-    content: '\e013';
-}*/
-
-#banner {
-    border-bottom: none;
-    margin-top: -20px;
-}
-
-#banner h1 {
-    font-size: 60px;
-    line-height: 1;
-    letter-spacing: -1px;
-}
-
-.hero-unit {
-    position: relative;
-    padding: 30px 15px;
-    color: #F5F5F5;
+.introheader {
+    padding-top: 100px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+    padding-bottom: 50px;
     text-align: center;
-    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
-    /*background: #4393B9;*/
-    background: #8e44ad;
+    color: #f8f8f8;
+    background: url(../../assets/images/clouds2.jpg) no-repeat center center;*/
+    background-size: cover;
+}
+
+#header-title {
+    color: white;
 }
 
 .footer {
