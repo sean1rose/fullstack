@@ -41,7 +41,7 @@ h6 {
 .intro-message {
     position: relative;
     padding-top: 20%;
-    padding-bottom: 20%;
+    padding-bottom: 5%;
 }
 
 .intro-message > h1 {
@@ -114,7 +114,8 @@ h6 {
 }
 
 .abcen {
-    position: absolute;bottom: 8%;
+/*    position: absolute;
+*/    bottom: 8%;
 }
 
 #h2title{

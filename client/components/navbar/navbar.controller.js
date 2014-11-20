@@ -2,10 +2,12 @@
 
 angular.module('fullstackApp')
   .controller('NavbarCtrl', function ($scope, $location, Auth) {
-    $scope.menu = [{
-      'title': 'Home',
-      'link': '/'
-    }, {
+    $scope.menu = [
+    // {
+    //   'title': 'Home',
+    //   'link': '/'
+    // }, 
+    {
       'title': 'New Project',
       'link': '/newproject'
     }, {
