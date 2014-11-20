@@ -3,16 +3,15 @@
 angular.module('fullstackApp')
   .controller('NavbarCtrl', function ($scope, $location, Auth) {
     $scope.menu = [
-    // {
-    //   'title': 'Home',
-    //   'link': '/'
-    // }, 
     {
       'title': 'New Project',
       'link': '/newproject'
     }, {
       'title': 'Browse Projects',
       'link': '/project'
+    },{
+      'title': 'Docs',
+      'link': '/docs'
     }];
 
     $scope.isCollapsed = true;
