@@ -109,3 +109,11 @@ h6 {
     background-color: #f8f8f8;
 }
 
+.button_down img {
+    width: 50px;   
+}
+
+.abcen {
+    position: absolute;bottom: 8%;
+}
+

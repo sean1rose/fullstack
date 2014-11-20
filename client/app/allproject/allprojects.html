@@ -1,14 +1,42 @@
 <div ng-include="'components/navbar/navbar.html'"></div>
 
-<header class="hero-unit" id="banner">
-  <div class="container">
-    <h1>Crowd Crunch</h1>
-    <p class="lead">THIS IS THE (BROWSE) ALL PROJECTS PAGE</p>
+<header>
+  <div class="introheader">
+    <h1 id="header-title">Browse Projects</h1>
+    <p class="lead">Discover amazing projects that are changing the world</p>
   </div>
 </header>
 
 <!-- This is exactly the same as partials/projects/projects.html EXCEPT for ng-controller="ProjectsCtrl", so clean this up-->
 <div class="container" ng-controller="AllProjectsController">
+
+  <br><br>  
+  <div class="container" style="margin-top: 20px; margin-bottom: 20px;">
+    <div class="row panel">
+      <div class="col-md-4 bg_blur ">
+      </div>
+          <div class="col-md-8  col-xs-12">
+             <img src="assets/images/n-Queens.jpg" class="img-thumbnail picture hidden-xs" />
+             <img src="assets/images/n-Queens.jpg" class="img-thumbnail visible-xs picture_mob" />
+             <div class="header">
+                  <h1>Featured Project:</h1>
+                  <h2 id="h2title">n-Queens</h2>
+                  <h4>by: Team Mountain-Colt</h4>
+                  <span>This text right here is filler. What will really go here is a description of the n-Queens algorithm for n = 27.</span>
+                  <p>Will more text fit? Not sure. But we might as well try to squeeze in as much as possible to see how it looks.</p>
+                  <br>
+                <div class="projectcontainer">
+                  <div class="progress progress-striped active">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 35%;">
+                      10 People
+                    </div>
+                  </div>
+                </div>
+             </div>
+          </div>
+      </div>   
+  </div>
+
   <div class="row" style="text-align:center">
       <div class="project" ng-repeat="project in projects"><a ng-href="/project/{{project._id}}">
           <div class="projectimage">
