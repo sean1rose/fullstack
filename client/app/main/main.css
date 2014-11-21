@@ -114,8 +114,8 @@ h6 {
 }
 
 #projectcontainer {
-    background-color: #f8f8f8;
-}
+/*    background-color: #f8f8f8;
+*/}
 
 .button_down img {
     width: 50px;   
@@ -226,3 +226,8 @@ h6 {
 .feature-section {
 /*    background-color: #f8f8f8;    
 */}
+
+footer {
+    background-color: #f8f8f8;
+    padding: 25px 0;
+}
