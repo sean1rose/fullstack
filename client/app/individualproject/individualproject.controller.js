@@ -13,5 +13,6 @@ angular.module('fullstackApp')
       $scope.projectdescription = currentProject['projectdescription'];
       $scope.projectduration = currentProject['projectduration'];
       $scope.projectgoals = currentProject['projectgoals'];
+      console.log('$scope.projectname', $scope.projectname);
     })
   })
