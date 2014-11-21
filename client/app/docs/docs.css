@@ -63,3 +63,8 @@
     color: black;
     font-weight: 400;
 }
+
+footer {
+    background-color: #f8f8f8;
+    padding: 25px 0;
+}
