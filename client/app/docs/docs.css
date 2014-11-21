@@ -17,3 +17,49 @@
     margin-top: 70px;
     border-top: 1px solid #E5E5E5;
 }
+
+.ptb {
+    padding-top: 80px; padding-bottom: 80px;
+}
+
+.mb {
+    margin-bottom: 50px;
+}
+
+.centered {
+    text-align: center;
+    color: #666;
+    font-weight: 100;
+}
+
+.doc-text {
+    font-size: 16px;
+    color: #666;
+}
+
+.dlbutton {
+    display: inline;
+    margin-bottom: 20px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.doch2{
+    text-align: center;
+}
+
+.button-container {
+    text-align: center;
+    width: 100%;
+}
+
+.dark {
+    color: black;
+    font-weight: 400;
+}
+
+.final-text {
+    text-align: center;
+    color: black;
+    font-weight: 400;
+}
