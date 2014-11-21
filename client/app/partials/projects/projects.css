@@ -154,13 +154,13 @@ span.tags
     color: black;
 }
 
-.project > div.ng-enter {
+/*.project > div.ng-enter {
     -webkit-animation: fadeInUp 3s;
     -moz-animation: fadeInUp 3s;
     -ms-animation: fadeInUp 3s;
     animation: fadeInUp 3s;
 }
-
+*/
 #projectcontainer {
-    background-color: #f8f8f8;
-}
+/*    background-color: #f8f8f8;
+*/}

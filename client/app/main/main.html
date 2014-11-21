@@ -88,12 +88,12 @@
 <br><br>
   <div class="container " style="margin-top: 20px; margin-bottom: 20px;">
     <div class="row panel">
-      <div class="col-md-4 bg_blur ">
+      <div class="col-md-4 bg_blur wow fadeInLeftBig">
       </div>
           <div class="col-md-8  col-xs-12">
-             <img src="assets/images/n-Queens.jpg" class="img-thumbnail picture hidden-xs" />
+             <img src="assets/images/n-Queens.jpg" class="img-thumbnail picture hidden-xs wow bounceInUp" />
              <img src="assets/images/n-Queens.jpg" class="img-thumbnail visible-xs picture_mob" />
-             <div class="header">
+             <div class="header wow pull-right fadeInRightBig">
                   <h1>Featured Project:</h1>
                   <h2 id="h2title">n-Queens</h2>
                   <h4>by: Team Mountain-Colt</h4>
@@ -115,10 +115,32 @@
 
 <div id="projectcontainer" ng-include="'app/partials/projects/projects.html'"></div>
 
-<footer class="footer">
-  <div class="container">
-      <p>
-         <a href="/">CrowdCrunch</a>
-       </p>
-  </div>
+<br>
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <ul class="list-inline">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li class="footer-menu-divider">&sdot;</li>
+                    <li>
+                        <a href="/project">Browse</a>
+                    </li>
+                    <li class="footer-menu-divider">&sdot;</li>
+                    <li>
+                        <a href="/docs">Docs</a>
+                    </li>
+                    <li class="footer-menu-divider">&sdot;</li>
+                    <li>
+                        <a href="/signup">Register</a>
+                    </li>
+                </ul>
+                <p class="copyright text-muted small">Copyright &copy; Crowd Crunch 2014. All Rights Reserved</p>
+            </div>
+        </div>
+    </div>
 </footer>
+
