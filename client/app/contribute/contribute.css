@@ -1,0 +1,70 @@
+.docs-header {
+    padding-top: 100px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+    padding-bottom: 50px;
+    text-align: center;
+    color: #f8f8f8;
+    background: url(../../assets/images/clouds2.jpg) no-repeat center center;*/
+    background-size: cover;
+}
+
+#header-title {
+    color: white;
+}
+
+.footer {
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 70px;
+    border-top: 1px solid #E5E5E5;
+}
+
+.ptb2 {
+    padding-top: 20px; padding-bottom: 20px;
+}
+
+.mb {
+    margin-bottom: 50px;
+}
+
+.centered {
+    text-align: center;
+    color: #666;
+    font-weight: 100;
+}
+
+.doc-text {
+    font-size: 16px;
+    color: #666;
+}
+
+.dlbutton {
+    display: inline;
+    margin-bottom: 20px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.doch2{
+    text-align: center;
+}
+
+.button-container {
+    text-align: center;
+    width: 100%;
+}
+
+.dark {
+    color: black;
+    font-weight: 400;
+}
+
+.final-text {
+    text-align: center;
+    color: black;
+    font-weight: 400;
+}
+
+footer {
+    background-color: #f8f8f8;
+    padding: 25px 0;
+}
