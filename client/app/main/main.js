@@ -15,4 +15,9 @@ angular.module('fullstackApp')
         templateURL: 'app/project/individualprojects.html',
         controller: 'ProjectCtrl'
       });
+      // .state('contribute',{
+      //   url: '/contribute',
+      //   templateUrl: 'app/contribute/contribute.html',
+      //   controller: 'ContributeController'
+      // })
   })

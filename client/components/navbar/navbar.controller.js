@@ -11,6 +11,9 @@ angular.module('fullstackApp')
       'title': 'Browse Projects',
       'link': '/project'
     },{
+      'title': 'Contribute',
+      'link': '/contribute'
+    },{
       'title': 'Docs',
       'link': '/docs'
     }];
