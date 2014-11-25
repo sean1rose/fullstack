@@ -16,6 +16,9 @@ angular.module('fullstackApp')
     },{
       'title': 'Docs',
       'link': '/docs'
+    },{
+      'title': 'About Us',
+      'link': '/aboutus'
     }];
 
     $scope.isCollapsed = true;
