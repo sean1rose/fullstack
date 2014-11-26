@@ -9,70 +9,70 @@
 
 
 
-<body>
-	<div class="container">
-		<div class="col-md-6 col-md-offset-3">
 
-			<!-- PAGE TITLE -->
-			<div class="page-header">
-				<h2><span></span>Submit Your Project Information</h2>
+<div class="container">
+	<div class="col-md-6 col-md-offset-3">
+
+		<!-- PAGE TITLE -->
+		<div class="page-header">
+			<h2><span></span>Submit Your Project Information</h2>
+		</div>
+
+		<br>
+		
+		<!-- SHOW ERROR/SUCCESS MESSAGES -->
+		<div id="messages" ng-show="message">{{message}}</div>
+
+		<!-- FORM, novalidate disables brower's native form validation so value of email won't set unless it passes input validation -->
+		<form name="projectForm" novalidate ng-submit="submitForm()">
+
+			<!-- Project Name -->
+			<div id="project-name" class="form-group" ng-class="{ 'has-error' : projectForm.projectname.$invalid && !projectForm.projectname.$pristine }">
+				<label>Project Name</label>
+				<input type="text" name="projectname" class="form-control" placeholder="Enter the name of your project..." ng-model="projectData.projectname" ng-minlength="3" ng-maxlength="30" required>
+				<p ng-show="projectForm.projectname.$error.minlength" class="help-block">Project Name is too short.</p>
+				<p ng-show="projectForm.projectname.$error.maxlength" class="help-block">Project Name is too long.</p>
 			</div>
 
-			<br>
+			<!-- Project Developer/Creator -->
+			<div id="project-developer" class="form-group" ng-class="{ 'has-error' : projectForm.developer.$invalid && !projectForm.developer.$pristine }">
+				<label>Project Developer</label>
+				<input type="text" name="developer" class="form-control" placeholder="Enter the name of your project's developer..." ng-model="projectData.developer" ng-minlength="3" ng-maxlength="50" required>
+				<p ng-show="projectForm.developer.$error.minlength" class="help-block">Project Developer's Name is too short.</p>
+				<p ng-show="projectForm.developer.$error.maxlength" class="help-block">Project Developer's Name is too long.</p>
+			</div>
+
+			<!-- Project Description - uses textarea rather than input-->
+			<div id="project-description" class="form-group" ng-class="{ 'has-error' : projectForm.projectDescription.$invalid && !projectForm.projectDescription.$pristine }">
+				<label>Project Description</label>
+				<textarea type="text" name="projectDescription" class="form-control" placeholder="Enter a short description of your project..." ng-model="projectData.projectdescription" rows="5" ng-minlength="3" ng-maxlength="150" required></textarea>
+				<p ng-show="projectForm.projectDescription.$error.minlength" class="help-block">Enter a Project Description.</p>
+				<p ng-show="projectForm.projectDescription.$error.maxlength" class="help-block">Project Description is too long.</p>
+			</div>
+
+			<!-- Project Duration -->
+			<div id="project-duration" class="form-group">
+				<label>Project Duration</label>
+				<input type="text" name="duration" class="form-control" placeholder="Enter the duration of your project..." ng-model="projectData.projectduration">
+				<span class="help-block"></span>
+			</div>
+
+			<!-- Computing Power Goals -->
+			<div id="computing-power-goals" class="form-group">
+				<label>Computing Power Goals</label>
+				<input type="text" name="computing-power-goals" class="form-control" placeholder="Enter desired computer processing goal..." ng-model="projectData.projectgoals">
+				<span class="help-block"></span>
+			</div>
 			
-			<!-- SHOW ERROR/SUCCESS MESSAGES -->
-			<div id="messages" ng-show="message">{{message}}</div>
-
-			<!-- FORM, novalidate disables brower's native form validation so value of email won't set unless it passes input validation -->
-			<form name="projectForm" novalidate ng-submit="submitForm()">
-
-				<!-- Project Name -->
-				<div id="project-name" class="form-group" ng-class="{ 'has-error' : projectForm.projectname.$invalid && !projectForm.projectname.$pristine }">
-					<label>Project Name</label>
-					<input type="text" name="projectname" class="form-control" placeholder="Enter the name of your project..." ng-model="projectData.projectname" ng-minlength="3" ng-maxlength="30" required>
-					<p ng-show="projectForm.projectname.$error.minlength" class="help-block">Project Name is too short.</p>
-					<p ng-show="projectForm.projectname.$error.maxlength" class="help-block">Project Name is too long.</p>
-				</div>
-
-				<!-- Project Developer/Creator -->
-				<div id="project-developer" class="form-group" ng-class="{ 'has-error' : projectForm.developer.$invalid && !projectForm.developer.$pristine }">
-					<label>Project Developer</label>
-					<input type="text" name="developer" class="form-control" placeholder="Enter the name of your project's developer..." ng-model="projectData.developer" ng-minlength="3" ng-maxlength="50" required>
-					<p ng-show="projectForm.developer.$error.minlength" class="help-block">Project Developer's Name is too short.</p>
-					<p ng-show="projectForm.developer.$error.maxlength" class="help-block">Project Developer's Name is too long.</p>
-				</div>
-
-				<!-- Project Description - uses textarea rather than input-->
-				<div id="project-description" class="form-group" ng-class="{ 'has-error' : projectForm.projectDescription.$invalid && !projectForm.projectDescription.$pristine }">
-					<label>Project Description</label>
-					<textarea type="text" name="projectDescription" class="form-control" placeholder="Enter a short description of your project..." ng-model="projectData.projectdescription" rows="5" ng-minlength="3" ng-maxlength="150" required></textarea>
-					<p ng-show="projectForm.projectDescription.$error.minlength" class="help-block">Enter a Project Description.</p>
-					<p ng-show="projectForm.projectDescription.$error.maxlength" class="help-block">Project Description is too long.</p>
-				</div>
-
-				<!-- Project Duration -->
-				<div id="project-duration" class="form-group">
-					<label>Project Duration</label>
-					<input type="text" name="duration" class="form-control" placeholder="Enter the duration of your project..." ng-model="projectData.projectduration">
-					<span class="help-block"></span>
-				</div>
-
-				<!-- Computing Power Goals -->
-				<div id="computing-power-goals" class="form-group">
-					<label>Computing Power Goals</label>
-					<input type="text" name="computing-power-goals" class="form-control" placeholder="Enter desired computer processing goal..." ng-model="projectData.projectgoals">
-					<span class="help-block"></span>
-				</div>
-				
-				<br>
-				<!-- SUBMIT BUTTON -->
-				<button type="submit" class="btn btn-embossed btn-primary btn-lg btn-block">
-					Register
-				</button>
-			</form>
-			<hr>
-		</div>
+			<br>
+			<!-- SUBMIT BUTTON -->
+			<button type="submit" class="btn btn-embossed btn-primary btn-lg btn-block">
+				Register
+			</button>
+		</form>
+		<hr>
 	</div>
+</div>
 <footer>
     <div class="container">
         <div class="row">
@@ -87,7 +87,15 @@
                     </li>
                     <li class="footer-menu-divider">&sdot;</li>
                     <li>
+                        <a href="/contribute">Contribute</a>
+                    </li>
+                    <li class="footer-menu-divider">&sdot;</li>
+                    <li>
                         <a href="/docs">Docs</a>
+                    </li>
+                    <li class="footer-menu-divider">&sdot;</li>
+                    <li>
+                        <a href="/aboutus">About Us</a>
                     </li>
                     <li class="footer-menu-divider">&sdot;</li>
                     <li>
@@ -99,6 +107,6 @@
         </div>
     </div>
 </footer>
-</body>
+
 
 
