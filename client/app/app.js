@@ -7,7 +7,7 @@ angular.module('fullstackApp', [
   'ngSanitize',
   'ui.router',
   'ui.bootstrap',
-  'angularSmoothscroll',
+  //'angularSmoothscroll',
   'ngAnimate'
 ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
