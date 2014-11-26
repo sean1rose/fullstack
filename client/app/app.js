@@ -7,6 +7,7 @@ angular.module('fullstackApp', [
   'ngSanitize',
   'ui.router',
   'ui.bootstrap',
+  //'angularSmoothscroll',
   'ngAnimate'
 ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
@@ -43,7 +44,7 @@ angular.module('fullstackApp', [
     };
   })
 
-  .run(function ($rootScope, $location, Auth) {
+  .run(function ($rootScope, $location, Auth, $anchorScroll) {
     // Redirect to login if route requires auth and you're not logged in
     $rootScope.$on('$stateChangeStart', function (event, next) {
       Auth.isLoggedInAsync(function(loggedIn) {
@@ -51,5 +52,6 @@ angular.module('fullstackApp', [
           $location.path('/login');
         }
       });
+      $anchorScroll();
     });
   });
