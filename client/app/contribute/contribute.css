@@ -4,6 +4,10 @@ p, h2 {
     color: white;
 }
 
+p {
+  font-size: 20px;
+}
+
 .white {
     color: white;
 }
@@ -140,4 +144,27 @@ p, h2 {
 footer {
     background-color: #f8f8f8;
     padding: 25px 0;
+}
+@media(max-width:767px) {
+    .intro-message {
+        padding-bottom: 15%;
+    }
+
+    .intro-message > h1 {
+        font-size: 3em;
+    }
+
+    ul.intro-social-buttons > li {
+        display: block;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    ul.intro-social-buttons > li:last-child {
+        margin-bottom: 0;
+    }
+
+    .intro-divider {
+        width: 100%;
+    }
 }
