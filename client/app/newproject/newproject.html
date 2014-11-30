@@ -1,21 +1,12 @@
 <div ng-include="'components/navbar/navbar.html'"></div>
 
-<header>
-  <div class="introheader">
-    <h1 id="header-title">Create New Project</h1>
-    <p class="lead">Submit your project information to harness the power of distributed computing</p>
-  </div>
-</header>
-
-
-
-
 <div class="container">
 	<div class="col-md-6 col-md-offset-3">
 
+		<br><br><br><br>
 		<!-- PAGE TITLE -->
 		<div class="page-header">
-			<h2><span></span>Submit Your Project Information</h2>
+			<h2 class="white centered2">Submit Your Project Information</h2>
 		</div>
 
 		<br>
@@ -28,7 +19,7 @@
 
 			<!-- Project Name -->
 			<div id="project-name" class="form-group" ng-class="{ 'has-error' : projectForm.projectname.$invalid && !projectForm.projectname.$pristine }">
-				<label>Project Name</label>
+				<label class="white centered2">Project Name</label>
 				<input type="text" name="projectname" class="form-control" placeholder="Enter the name of your project..." ng-model="projectData.projectname" ng-minlength="3" ng-maxlength="30" required>
 				<p ng-show="projectForm.projectname.$error.minlength" class="help-block">Project Name is too short.</p>
 				<p ng-show="projectForm.projectname.$error.maxlength" class="help-block">Project Name is too long.</p>
@@ -36,7 +27,7 @@
 
 			<!-- Project Developer/Creator -->
 			<div id="project-developer" class="form-group" ng-class="{ 'has-error' : projectForm.developer.$invalid && !projectForm.developer.$pristine }">
-				<label>Project Developer</label>
+				<label class="white centered2">Project Developer</label>
 				<input type="text" name="developer" class="form-control" placeholder="Enter the name of your project's developer..." ng-model="projectData.developer" ng-minlength="3" ng-maxlength="50" required>
 				<p ng-show="projectForm.developer.$error.minlength" class="help-block">Project Developer's Name is too short.</p>
 				<p ng-show="projectForm.developer.$error.maxlength" class="help-block">Project Developer's Name is too long.</p>
@@ -44,7 +35,7 @@
 
 			<!-- Project Description - uses textarea rather than input-->
 			<div id="project-description" class="form-group" ng-class="{ 'has-error' : projectForm.projectDescription.$invalid && !projectForm.projectDescription.$pristine }">
-				<label>Project Description</label>
+				<label class="white centered2">Project Description</label>
 				<textarea type="text" name="projectDescription" class="form-control" placeholder="Enter a short description of your project..." ng-model="projectData.projectdescription" rows="5" ng-minlength="3" ng-maxlength="150" required></textarea>
 				<p ng-show="projectForm.projectDescription.$error.minlength" class="help-block">Enter a Project Description.</p>
 				<p ng-show="projectForm.projectDescription.$error.maxlength" class="help-block">Project Description is too long.</p>
@@ -52,14 +43,14 @@
 
 			<!-- Project Duration -->
 			<div id="project-duration" class="form-group">
-				<label>Project Duration</label>
+				<label class="white centered2">Project Duration</label>
 				<input type="text" name="duration" class="form-control" placeholder="Enter the duration of your project..." ng-model="projectData.projectduration">
 				<span class="help-block"></span>
 			</div>
 
 			<!-- Computing Power Goals -->
 			<div id="computing-power-goals" class="form-group">
-				<label>Computing Power Goals</label>
+				<label class="white centered2">Computing Power Goals</label>
 				<input type="text" name="computing-power-goals" class="form-control" placeholder="Enter desired computer processing goal..." ng-model="projectData.projectgoals">
 				<span class="help-block"></span>
 			</div>
@@ -71,6 +62,7 @@
 			</button>
 		</form>
 		<hr>
+		<br><br><br><br>
 	</div>
 </div>
 <footer>

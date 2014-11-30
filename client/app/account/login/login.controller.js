@@ -4,6 +4,7 @@ angular.module('fullstackApp')
   .controller('LoginCtrl', function ($scope, Auth, $location, $window) {
     $scope.user = {};
     $scope.errors = {};
+    $scope.inputType = 'password';
 
     $scope.login = function(form) {
       $scope.submitted = true;
