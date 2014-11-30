@@ -74,12 +74,6 @@ p {
   font-weight:bold;
 }
 
-#downloadbutton {
-    -webkit-animation: bounceInRight 1s;
-    -moz-animation: bounceInRight 1s;
-    -ms-animation: bounceInRight 1s;
-    animation: bounceInRight 1s;
-}
 
 .header2text {
   color: white;
@@ -115,7 +109,7 @@ p {
     margin-bottom: 50px;
 }
 
-.centered2 {
+.centered3 {
     text-align: center;
     color: white;
     font-weight: 100;
