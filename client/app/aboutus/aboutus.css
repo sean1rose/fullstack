@@ -136,6 +136,22 @@ p {
     overflow: hidden;
 }
 
+.gitContactButton{
+  color:white
+}
+
+
+.gitContactButton:hover{
+  color:#428bca
+}
+.linkedInContactButton{
+  color:white
+}
+
+.linkedInContactButton:hover{
+  color:#428bca
+}
+
 .doch2{
     text-align: center;
 }

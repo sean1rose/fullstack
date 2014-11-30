@@ -1,22 +1,24 @@
 <div ng-include="'components/navbar/navbar.html'"></div>
-
 <div id="title" class="slide header2text">
   <div class="ptb2">
   <div class="row">
     <br>
-    <h1 class="centered2 mb white">You're not using your computer all the time.<br/><br>We provide researchers with access to that idle processing power.</h1><br>
+    <h1 class="centered2 mb white" id="intro-header">Your computer spends most of its time sitting idle.<br/><br>Contribute that idle processing power <br>to research projects of your choice.</h1><br>
     <h2 class= "centered2 mb white">HOW IT WORKS</h2>
+    <div class="col-md-3"></div>
     <div class="col-md-6 doc-text">
-      <p>Crowd Crunch maintains master nodes. You can think of a master node as akin to mission control. Its job it to guide and direct the  airplanes it oversees, or in our case, its worker nodes.</p><br>
-      <p>When you download our app, one of those workers will live on your computer.</p><br>
-      <p>Based on your preferences, that worker will be available to contribute computing power whenever specified.</p>
+      <p>Crowd Crunch maintains a cluster of master nodes. Your computer joins the cluster as a worker node.  The masters can then distribute individual computational tasks to each worker.</p><br>
+      <p>When you download our app, a worker node in a box will live on your computer.  Don't worry--it's entirely contained and separate from your system.  Nothing inside can get out.</p><br>
+      <p>That worker will be available to contribute computing power to the cluster according to the schedule you specify in the app settings.</p>
       <br>
-    </div><!--/col-md-6-->
-    <div class="col-md-6 doc-text">
+    </div>
+    <div class="col-md-3"></div>
+    <!--/col-md-6-->
+<!--     <div class="col-md-6 doc-text">
       <p>Our job at Crowd Crunch is to take large-scale projects and break them up into smaller, more manageable chunks.</p><br>
       <p>Then, once those jobs are sufficiently parallel, the Crowd Crunch master node is able to divvy up those tasks amongst its workers.</p><br>
       <p>As a result, you're able to contribue raw computer-processing power to worthwhile projects, right away.</p>
-    </div><!--/col-md-6-->
+    </div><! -/col-md-6-->
   </div><!--/row-->
 </div><!-- /.container -->
 
@@ -26,12 +28,12 @@
     <h2 class="centered2 mb">1. Download the app.</h2>
     <ul class="centered2 list-inline intro-social-buttons">
         <li>
-            <a href="#" class="btn btn-default btn-lg"><i class="fa fa-cloud-download fa-fw"></i> <span class="network-name">Download App</span></a>
+            <a href="http://crowdcrunchstorage.azurewebsites.net/CrowdCrunchInstaller.zip" id="downloadbutton" class="wow btn btn-default btn-lg" data-wow-delay="0.6s"><i class="fa fa-cloud-download fa-fw"></i> <span class="network-name">Download App</span></a>
         </li>
     </ul>
     <br>
-    <h2 class="centered2 mb">2. Select a project you'd like to contribute to.</h2>
-    <h2 class="centered2 mb">3. Adjust your preferences as you see fit. You get to decide how much computing power you want to contribute and when you want to contribute it.</h2>
+    <h2 class="centered2 mb">2. Select a project to which you'd like to contribute.</h2>
+    <h2 class="centered2 mb">3. Adjust your preferences to set the schedule of when to allow your computer to contribute. </h2>
   </div><!--/row-->
 </div><!-- /.container -->
 
