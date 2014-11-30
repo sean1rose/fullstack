@@ -38,6 +38,7 @@ p {
   box-shadow: 0 0 8px rgba(0, 0, 0, .7);
 }
 
+
 .slide:nth-child(2n) .title {
   margin-left: 0;
   margin-right: auto;
@@ -67,6 +68,10 @@ p {
     /* clouds10, 5, 4, 12, 13 */
   background-image: url(../../assets/images/clouds10.jpg);
   background-attachment: fixed;
+}
+
+#intro-header{
+  font-weight:bold;
 }
 
 .header2text {
@@ -112,6 +117,7 @@ p {
 .doc-text {
     font-size: 16px;
     color: #666;
+    text-align:center;
 }
 
 .dlbutton {
