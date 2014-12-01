@@ -74,7 +74,7 @@ form.login input[type="text"], form.login input[type="password"], form.login inp
     font-weight: 400;
     letter-spacing: 1px;
     margin-bottom: 5px;
-    color: #FFFFFF;
+    color: black;
     outline: 0;
 }
 
