@@ -8,6 +8,15 @@ p {
   font-size: 20px;
 }
 
+a {
+  color:inherit;
+  text-decoration: underline;
+}
+
+a:hover{
+  color:#cf5300;
+}
+
 .white {
     color: white;
 }
