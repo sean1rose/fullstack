@@ -11,24 +11,7 @@ p {
 .white {
     color: white;
 }
-.slide {
-  position: relative;
-  padding: 25vh 10%;
-  min-height: 100vh;
-  width: 100vw;
-  box-sizing: border-box;
-  box-shadow: 0 -1px 10px rgba(0, 0, 0, .7);
-    transform-style: inherit;
-}
 
-.slide:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left:0;
-  right:0;
-}
 
 .title {
   width: 50%;
@@ -38,20 +21,6 @@ p {
   box-shadow: 0 0 8px rgba(0, 0, 0, .7);
 }
 
-
-.slide:nth-child(2n) .title {
-  margin-left: 0;
-  margin-right: auto;
-}
-
-.slide:nth-child(2n+1) .title {
-  margin-left: auto;
-  margin-right: 0;
-}
-
-.slide, .slide:before {
-  background: 50% 50% / cover;  
-}
 
 .header2 {
   color : #808080;
@@ -66,7 +35,7 @@ p {
 
 #title {
     /* clouds10, 5, 4, 12, 13 */
-  background-image: url(../../assets/images/clouds10.jpg);
+  background-image: url(../../assets/images/clouds4.jpg);
   background-attachment: fixed;
 }
 
